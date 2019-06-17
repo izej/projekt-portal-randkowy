@@ -1,0 +1,33 @@
+.mat-toolbar {
+  background-color: #6d3341;
+  text-align: center;
+  border-top: 1px solid #632a37;
+  border-bottom: 1px solid #632a37;
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+#first-button {
+
+  width: 600px;
+  height:40px;
+  font-size: 40px;
+  font-family: 'GreatVibes';
+}
+
+#first-button:hover {
+  background-color: none;
+}
+
+.buttons {
+  font-family: NewsCycle-Regular;
+  width: 200px;
+  font-size: 18px;
+
+}
+
+.buttons:hover {
+  background-color: #632a37;
+}

@@ -1,0 +1,27 @@
+.content {
+  margin: 20px;
+}
+
+
+.image {
+  height: 60px;
+  width: 60px;
+
+border-radius: 50%;
+
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.text-images {
+  float: left;
+  font-size: 15px;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  word-wrap:break-word;
+  max-width:100%;
+}

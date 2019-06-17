@@ -1,0 +1,47 @@
+<mat-toolbar >
+
+  <span>
+    <span class="fill-remaining-space"></span>
+  </span>
+ <button mat-button routerLink="/registry-home" id="first-button" *ngIf="!(isLoggedIn$ | async)"> RealLove </button>
+ <button mat-button routerLink="/home-user" id="first-button" *ngIf="(isLoggedIn$ | async)"> RealLove </button>
+
+ <!-- <button mat-button [matMenuTriggerFor]="user" class="buttons">UŻYTKOWNIK</button>
+ <mat-menu #user="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="profile" >PROFIL</button> </mat-menu>
+  <mat-menu #profile="matMenu">
+    <button mat-menu-item>Mój profil</button>
+</mat-menu> -->
+
+
+
+
+
+  <button mat-button routerLink="/about" class="buttons">O NAS</button>
+  <button mat-button routerLink="/profiles" class="buttons">PRZEGLĄDAJ PROFILE</button>
+  <button mat-button routerLink="/login" *ngIf="!(isLoggedIn$ | async)"  class="buttons">ZALOGUJ</button>
+  <button mat-button (click)="onLogout()" *ngIf="(isLoggedIn$ | async)"   class="buttons" >WYLOGUJ</button>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu"  *ngIf="(isLoggedIn$ | async)" >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/user">
+        <mat-icon>person</mat-icon>
+        <span>Mój profil</span>
+      </button>
+        <!-- <button mat-menu-item disabled></button> -->
+        <button mat-menu-item>
+            <mat-icon>group</mat-icon>
+            <span>Znajomi</span>
+          </button>
+      <button mat-menu-item>
+        <mat-icon>verified_user</mat-icon>
+        <span>Kup konto premium</span>
+      </button>
+
+    </mat-menu>
+
+<div style="clear: both"> </div>
+</mat-toolbar>
+

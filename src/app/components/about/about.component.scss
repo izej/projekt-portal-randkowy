@@ -1,0 +1,56 @@
+
+.content {
+  width: 100%;
+}
+
+.about-us {
+  float:left;
+  width: 60%;
+  border-right: 1px solid #e9e7e7ab;
+  font-family: JuliusSansOne;
+  margin-top: 10px;
+
+  padding: 15px;
+}
+
+h1 {
+  font-family: NewsCycle-Regular;
+  margin-left: 65px;
+  color: #1d1a1b;
+  font-size: 27px;
+
+}
+
+.image {
+  border: 1px solid #5c5859c0;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  color: #632a37;
+  font-family: OpenSansCondensed-LightItalic;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 49px;
+
+}
+
+h3 {
+  color: #6d3341;
+  font-family: GreatVibes;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 49px;
+  font-size: 30px;
+
+}
+
+
+
+.autors{
+  float:left;
+}

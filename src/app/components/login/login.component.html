@@ -1,0 +1,46 @@
+<!-- <app-menu> </app-menu> -->
+<div class="container">
+  <div class="registry">
+    <div class="regbox">
+      <img class="logo" src="assets/img/739453.png" width="30%" height="30%" />
+      <div class="prettyText">Poznaj i odmień swoje życie</div>
+
+      <div class="example-container">
+        <mat-card>
+          <mat-card-content>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+              <mat-form-field class="full-width-input">
+                <input
+                  matInput
+                  placeholder="Login"
+                  formControlName="userName"
+                  required
+                />
+                <mat-error *ngIf="isFieldInvalid('userName')">
+                  Podaj login
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="full-width-input">
+                <input
+                  matInput
+                  type="password"
+                  placeholder="Hasło"
+                  formControlName="password"
+                  required
+                />
+                <mat-error *ngIf="isFieldInvalid('userName')">
+                  Podaj hasło
+                </mat-error>
+              </mat-form-field>
+              <button  mat-fab class="round-button">> ></button>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class="buttondiv"></div>
+
+    <div style="clear: both"></div>
+  </div>
+</div>

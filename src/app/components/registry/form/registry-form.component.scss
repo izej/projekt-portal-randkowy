@@ -1,0 +1,127 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: url(/src/assets/img/i5.jpg);
+}
+
+.content-box {
+background-color: #ffffff;
+border-radius: 4px;
+width: 700px;
+margin: 35px;
+margin-left: -200px;
+padding: 10px;
+box-shadow: 0 8px 8px 0 rgba(99, 81, 81, 0.22), 0 8px 8px 0 rgba(83, 70, 70, 0.3);
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #6d3341;
+  text-align: center;
+	border-top: 1px solid #632a37;
+  border-bottom: 1px solid #632a37;
+  color: #ffffff;
+  height: 70px;
+  padding-bottom: 10px;
+}
+
+h1 {
+	font-size: 35px;
+  font-family: 'GreatVibes';
+  float: left;
+
+}
+
+h2 {
+  font-family: NewsCycle-Regular;
+  font-size: 20px;
+  float: left;
+  margin-left: 20px;
+
+}
+
+h3 {
+  font-family: NewsCycle-Regular;
+
+  font-size: 23px;
+  float: left;
+  margin-left: 15px;
+  color: rgb(255, 43, 78);
+
+}
+
+
+.icon {
+  float: left;
+  color: rgb(255, 43, 78);
+  font-size: 30px;
+}
+
+.personal_data {
+  display: flex;
+  justify-content: center;
+
+}
+
+.user_data {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+
+}
+
+.td_class_r {
+  width: 350px;
+
+}
+
+.td_class_l {
+  width: 350px;
+  text-transform: uppercase;
+  font-family: NewsCycle-Regular;
+  padding-left: 70px;
+  font-size: 17px;
+  padding-top: 5px;
+}
+
+table {
+  margin-bottom: 14px;
+
+}
+
+.separated {
+  width: 700px;
+  height: 1px;
+  border-bottom: solid 1px #6d3341;
+}
+
+#picker1 {
+  color: black;
+}
+
+mat-datepicker-toggle {
+  color: black;
+}
+
+.button_next {
+  background-color: rgb(255, 43, 78);
+  color: white;
+  margin-right: 10px;
+}
+
+.button-cont {
+  display: flex;
+  justify-content: flex-end;
+    width: 700px;
+}
+
+
+mat-step-header
+{
+  background-color: #6d3341;
+}
+

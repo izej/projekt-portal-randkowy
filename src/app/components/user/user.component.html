@@ -1,0 +1,162 @@
+<div class="pagewrapper">
+  <div class="content">
+    <div class="state-profile" rememberscroll="false">
+      <div class="gray-bg">
+        <section class="header">
+          <h2 class="name">
+            <span class="name-label">
+              {{ user.name }}
+            </span>
+          </h2>
+          <div class="subline-profile">
+            <div class="subline-profile-from">
+              {{ user.province }}, {{ user.country }}
+            </div>
+
+            <button mat-button class="button-message">Napisz wiadomość</button>
+          </div>
+          <div style="clear: both"></div>
+        </section>
+        <section class="main">
+          <div class="col">
+            <figure class="gallery">
+              <div class="photo-wrapper">
+                <div
+                  class="photo"
+                  ng-init="source = 'https://www.emerse.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png'"
+                >
+                  <!-- <img class="thumb" ng-src="{{source ? source : 'pathtodefault.png'}}"/> -->
+                  <img
+                    src="https://www.emerse.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png"
+                    width="300px;"
+                    height="300px;"
+                  />
+                </div>
+              </div>
+            </figure>
+
+            <div class="menu">
+              <ul>
+                <li>
+                  <div class="favico" (click)="showFavourite = !showFavourite">
+                    <mat-icon class="ico" *ngIf="!showFavourite"
+                      >favorite_border</mat-icon
+                    >
+                    <mat-icon class="ico" *ngIf="!!showFavourite"
+                      >favorite</mat-icon
+                    >
+                  </div>
+                  <p class="text-icon" *ngIf="!showFavourite">
+                    Dodaj do Ulubionych
+                  </p>
+                  <p class="text-icon" *ngIf="!!showFavourite">
+                    Usuń z Ulubionych
+                  </p>
+                  <div style="clear: both"></div>
+                </li>
+                <li>
+                  <div class="favico" (click)="showFlag = !showFlag">
+                    <mat-icon class="ico" *ngIf="!showFlag"
+                      >outlined_flag</mat-icon
+                    >
+                    <mat-icon class="ico" *ngIf="!!showFlag">flag</mat-icon>
+                  </div>
+                  <p class="text-icon">Zgłoś użytkownika</p>
+                  <div style="clear: both"></div>
+                </li>
+
+                <li>
+                  <div class="favico" (click)="showLock = !showLock">
+                    <mat-icon class="ico" *ngIf="!!showLock">lock</mat-icon>
+                    <mat-icon class="ico" *ngIf="!showLock">lock_open</mat-icon>
+                  </div>
+                  <p class="text-icon" *ngIf="!showLock">Odblokuj</p>
+                  <p class="text-icon" *ngIf="!!showLock">Zablokuj</p>
+                  <div style="clear: both"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <section class="profile-properties">
+            <h5 class="about-me">O MNIE</h5>
+            <table class="text-copy">
+              <tbody>
+                <!---->
+                <tr class="greeting">
+                  <td colspan="2">
+                    <span id="about-me-text"> {{ user.about }} </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" style="height: 20px;"></td>
+                </tr>
+                <tr>
+                  <td class="td-col">Wiek</td>
+                  <td>{{ user.age }}</td>
+                </tr>
+                <tr>
+                  <td class="td-col">Edukacja</td>
+                  <td>{{ user.education }}</td>
+                </tr>
+                <!---->
+                <tr>
+                  <td class="td-col">Zawód</td>
+                  <td>{{ user.proffesion }}</td>
+                </tr>
+                <tr>
+                  <td class="td-col">Wzrost</td>
+                  <td>
+                    <span>{{ user.growth }}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-col">Budowa ciała</td>
+                  <td>
+                    <span>{{ user.figure }}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-col">Kolor włosów</td>
+                  <td>{{ user.hair }}</td>
+                </tr>
+                <tr>
+                  <td class="td-col">Kolor oczu</td>
+                  <td>
+                    <span>{{ user.eye }}</span>
+                  </td>
+                </tr>
+                <!---->
+                <!---->
+                <tr>
+                  <td class="td-col">Religia</td>
+                  <td>{{ user.religion }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="rich-properties">
+              <div class="icon">
+                <mat-icon [inline]="true">smoking_rooms</mat-icon>
+                <div class="small-text">czasami</div>
+              </div>
+              <div class="icon">
+                <mat-icon [inline]="true">local_bar</mat-icon>
+                <div class="small-text">często</div>
+              </div>
+              <div class="icon">
+                <mat-icon [inline]="true">child_friendly</mat-icon>
+                <div class="small-text">brak</div>
+              </div>
+              <div style="clear: both"></div>
+            </div>
+          </section>
+
+          <div style="clear: both"></div>
+
+          <div style="clear: both"></div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-views> </app-views>
