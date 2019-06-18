@@ -57,6 +57,66 @@ export const USERS = [
     },
     "localization": "Bytom"
   },
+
+  {
+    "id": 82,
+    "name": "Marian",
+    "surname": "Miziacz",
+    "dob": 15600232393000,
+    "email": "mail",
+    "phone": "123456789",
+    "gender": "sa",
+    "login": "premium3",
+    "avatar": "https://medandspa.pl/wp-content/uploads/2015/05/boy-3-300x300.jpg",
+    "preferencesid": {
+      "preferencesid": 24,
+      "appearanceid": {
+        "appearanceid": 33,
+        "eyecolor": "kolor",
+        "haircolor": "kolor",
+        "hairlength": "wlosy",
+        "figure": "budowa",
+        "heigth": "wzrost"
+      },
+      "lifestyleid": {
+        "lifestyleid": 21,
+        "religion": "relion",
+        "alcohol": "alcohol",
+        "smoking": "smoking",
+        "drugs": "drugs",
+        "kids": "kids"
+      }
+    },
+    "appearanceid": {
+      "appearanceid": 23,
+      "eyecolor": "kolor",
+      "haircolor": "kolor",
+      "hairlength": "wlosy",
+      "figure": "budowa",
+      "heigth": "wzrost"
+    },
+    "lifestyleid": {
+      "lifestyleid": 31,
+      "religion": "relion",
+      "alcohol": "alcohol",
+      "smoking": "smoking",
+      "drugs": "drugs",
+      "kids": "kids"
+    },
+    "educationid": {
+      "educationid": 42,
+      "education": "asd",
+      "proffesion": "narciarz"
+    },
+    "accountnid": {
+      "accountid": 85,
+      "type": "premium",
+      "registerdate": 1560092993857,
+      "validdate": 1562684993857
+    },
+    "localization": "Gdańsk"
+  },
+
   {
     "id": 66,
     "name": "imie",

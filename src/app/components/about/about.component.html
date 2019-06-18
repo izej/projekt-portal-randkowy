@@ -1,6 +1,72 @@
 
 <div class="content" >
 
+  <!-- test -->
+  <mat-sidenav-container class="example-container" >
+      <mat-sidenav #sidenav mode="over" position="end" class="sidenav">
+
+          <div class="regbox">
+              <img class="logo" src="assets/img/739453.png" width="30%" height="30%">
+              <div class="prettyText">Poznaj i odmień swoje życie </div>
+
+              <div class="gender">
+                <div class="myGender">
+                  <h3>JESTEM</h3>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1" class="choose">Kobietą</mat-radio-button>
+                    <mat-radio-button value="2" class="choose">Mężczyzną</mat-radio-button>
+                  </mat-radio-group>
+
+                </div>
+                <div class="colGender">
+                  <h3>SZUKAM</h3>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1" class="choose">Kobiety</mat-radio-button>
+                    <mat-radio-button value="2" class="choose">Mężczyzny</mat-radio-button>
+                  </mat-radio-group>
+
+                </div>
+
+
+
+                <div style="clear: both"> </div>
+
+              </div>
+
+              <div class="example-containerr">
+
+                <mat-form-field appearance="outline" >
+                  <input class="outline-form" type="text" matInput placeholder="podaj e-mail" [formControl] = "email" required >
+                  <mat-error *ngIf = "email.invalid"> {{getErrorMessage()}} </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                  <input matInput placeholder="podaj hasło" [type]=" hide ? 'password' : 'text'" [formControl] = "password" required >
+                  <mat-icon matSuffix (click)="hide = !hide">{{ hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  <mat-error *ngIf = "password.invalid"> {{getErrorMessage()}} </mat-error>
+                </mat-form-field>
+
+                <button  mat-fab class="round-button" routerLink="/registry-form"> > > </button>
+                </div>
+
+
+
+            </div>
+
+      </mat-sidenav>
+
+      <mat-sidenav-content>
+
+
+
+
+
+
+  <!-- test -->
+
+
   <div class="about-us">
       <h1>Witaj na naszym portalu! Jesteś gotowy by znaleźć miłość? </h1>
       <div class="images">
@@ -10,10 +76,14 @@
     <h2>>> Jesteśmy niezawodnym serwisem matrymonialnym, wspierającym naszych użytkowników w szukaniu stałego lub tymczasowego partnera </h2>
     <h2>>> Użytkownicy sześciu kontynentów zaufali nam i powierzyli szukanie miłości ich życia </h2>
     <h2>>> Ponad 140% wszystkich użytkowników Konta Premium znalazło swoją miłość</h2>
-    <h3>Nie czekaj, bądź jednym z nich!</h3>
+    <h3>Nie czekaj, bądź jednym z nich! <button mat-raised-button (click)="sidenav.toggle()" class="raised">Dołącz</button></h3>
+
 
 
   </div>
   <div class="autors"> </div>
   <div style="clear: both"> </div>
+
+</mat-sidenav-content>
+</mat-sidenav-container>
 </div>

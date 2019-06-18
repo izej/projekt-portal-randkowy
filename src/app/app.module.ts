@@ -1,13 +1,14 @@
-import { NgModule } from "@angular/core";
-import { ReactiveFormsModule } from "@angular/forms";
-import { BrowserModule } from "@angular/platform-browser";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppMaterialModule } from "./app-material/app-material.module";
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { services } from "./rest-api/services";
-import { components } from "./components";
+import { AppMaterialModule } from './app-material/app-material.module';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { services } from './rest-api/services';
+import { components } from './components';
+import { AppPrimengModule } from './app-primeng/app-primeng.module';
 
 @NgModule({
   declarations: [...components],
@@ -16,7 +17,8 @@ import { components } from "./components";
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    AppMaterialModule
+    AppMaterialModule,
+    AppPrimengModule
   ],
   providers: [...services],
   bootstrap: [AppComponent]
