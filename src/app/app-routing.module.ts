@@ -8,6 +8,7 @@ import { NotfoundComponent } from './components/not-found/not-found.component';
 import { HomeUserComponent } from './components/home-user/home-user.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProfilesComponent } from './components/profiles/profiles.component';
+import { MessagesComponent } from './components/messages/messages.component';
 
 const appRoutes: Routes = [
   {
@@ -25,6 +26,10 @@ const appRoutes: Routes = [
   {
     path: 'user',
     component: UserComponent
+  },
+  {
+    path: 'messages',
+    component: MessagesComponent
   },
   {
     path: 'about',

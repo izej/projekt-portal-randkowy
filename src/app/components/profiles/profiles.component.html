@@ -5,7 +5,8 @@
 
     <mat-grid-list cols="3" rowHeight="400px">
         <mat-grid-tile
-            *ngFor="let user of users" >
+            *ngFor="let user of users |
+            slice: lowValue : highValue" >
             <div class="user-profile">
            <div class="pic">
               <img class="image" [src]="user.avatar" width="100%" height="100%">
@@ -31,9 +32,11 @@
         </mat-grid-tile>
       </mat-grid-list>
 
-      <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+      <mat-paginator [length]="users.length" [pageSize]="pageSize"
+   (page)="pageEvent = getPaginatorData($event)">
+</mat-paginator>
 
-        </mat-paginator>
+
 
   </div>
 </div>
