@@ -7,9 +7,10 @@ import { UserService } from 'src/app/rest-api/services/user.service';
   styleUrls: ['./messages.component.scss']
 })
 export class MessagesComponent implements OnInit {
+  displayedColumns = ['avatar', 'name', 'surname'];
   users: any[];
   panelOpenState = false;
-
+  searchText = '';
   constructor(private service: UserService) { }
 
   ngOnInit() {

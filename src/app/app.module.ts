@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { services } from './rest-api/services';
 import { components } from './components';
 import { AppPrimengModule } from './app-primeng/app-primeng.module';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [...components],
@@ -18,7 +18,8 @@ import { AppPrimengModule } from './app-primeng/app-primeng.module';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AppMaterialModule,
-    AppPrimengModule
+    AppPrimengModule,
+    FormsModule
   ],
   providers: [...services],
   bootstrap: [AppComponent]

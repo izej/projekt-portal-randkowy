@@ -65,7 +65,7 @@ export const USERS = [
     "dob": 15600232393000,
     "email": "mail",
     "phone": "123456789",
-    "gender": "sa",
+    "gender": "m",
     "login": "premium3",
     "avatar": "https://medandspa.pl/wp-content/uploads/2015/05/boy-3-300x300.jpg",
     "preferencesid": {
@@ -299,7 +299,7 @@ export const USERS = [
     "dob": 15600232393000,
     "email": "mail",
     "phone": "123456789",
-    "gender": "sa",
+    "gender": "m",
     "login": "premium3",
     "avatar": "https://medandspa.pl/wp-content/uploads/2015/05/boy-3-300x300.jpg",
     "preferencesid": {
@@ -533,7 +533,7 @@ export const USERS = [
     "dob": 15600232393000,
     "email": "mail",
     "phone": "123456789",
-    "gender": "sa",
+    "gender": "m",
     "login": "premium3",
     "avatar": "https://medandspa.pl/wp-content/uploads/2015/05/boy-3-300x300.jpg",
     "preferencesid": {
@@ -767,7 +767,7 @@ export const USERS = [
     "dob": 15600232393000,
     "email": "mail",
     "phone": "123456789",
-    "gender": "sa",
+    "gender": "m",
     "login": "premium3",
     "avatar": "https://medandspa.pl/wp-content/uploads/2015/05/boy-3-300x300.jpg",
     "preferencesid": {
@@ -827,7 +827,7 @@ export const USERS = [
     "dob": 1560087013000,
     "email": "mail",
     "phone": "123456789",
-    "gender": "m",
+    "gender": "f",
     "login": "premium",
     "preferencesid": {
       "preferencesid": 64,

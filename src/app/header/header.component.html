@@ -16,8 +16,8 @@
 
 
 
-
-  <button mat-button routerLink="/about" class="buttons">O NAS</button>
+<button mat-button  *ngIf="(isLoggedIn$ | async)"  class="buttons">WIADOMOŚCI</button>
+  <button mat-button routerLink="/about" *ngIf="!(isLoggedIn$ | async)"  class="buttons">O NAS</button>
   <button mat-button routerLink="/profiles" class="buttons">PRZEGLĄDAJ PROFILE</button>
   <button mat-button routerLink="/login" *ngIf="!(isLoggedIn$ | async)"  class="buttons">ZALOGUJ</button>
   <button mat-button (click)="onLogout()" *ngIf="(isLoggedIn$ | async)"   class="buttons" >WYLOGUJ</button>

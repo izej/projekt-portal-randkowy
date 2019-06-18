@@ -39,12 +39,10 @@
               <ul>
                 <li>
                   <div class="favico" (click)="showFavourite = !showFavourite">
-                    <mat-icon class="ico" *ngIf="!showFavourite"
-                      >favorite_border</mat-icon
-                    >
-                    <mat-icon class="ico" *ngIf="!!showFavourite"
-                      >favorite</mat-icon
-                    >
+                      <button mat-mini-fab class="button-icon">
+                          <mat-icon *ngIf="!showFavourite">favorite_border</mat-icon>
+                          <mat-icon *ngIf="!!showFavourite">favorite</mat-icon>
+                        </button>
                   </div>
                   <p class="text-icon" *ngIf="!showFavourite">
                     Dodaj do Ulubionych
@@ -56,10 +54,11 @@
                 </li>
                 <li>
                   <div class="favico" (click)="showFlag = !showFlag">
-                    <mat-icon class="ico" *ngIf="!showFlag"
-                      >outlined_flag</mat-icon
-                    >
-                    <mat-icon class="ico" *ngIf="!!showFlag">flag</mat-icon>
+
+                      <button mat-mini-fab class="button-icon">
+                          <mat-icon *ngIf="!showFlag">outlined_flag</mat-icon>
+                          <mat-icon *ngIf="!!showFlag">flag</mat-icon>
+                        </button>
                   </div>
                   <p class="text-icon">Zgłoś użytkownika</p>
                   <div style="clear: both"></div>
@@ -67,8 +66,10 @@
 
                 <li>
                   <div class="favico" (click)="showLock = !showLock">
-                    <mat-icon class="ico" *ngIf="!!showLock">lock</mat-icon>
-                    <mat-icon class="ico" *ngIf="!showLock">lock_open</mat-icon>
+                      <button mat-mini-fab class="button-icon">
+                          <mat-icon *ngIf="!!showLock">lock</mat-icon>
+                          <mat-icon *ngIf="!showLock">lock_open</mat-icon>
+                        </button>
                   </div>
                   <p class="text-icon" *ngIf="!showLock">Odblokuj</p>
                   <p class="text-icon" *ngIf="!!showLock">Zablokuj</p>

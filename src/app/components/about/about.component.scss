@@ -106,6 +106,12 @@ background: url("/assets/img/white_tiles.png") repeat;
   font-size: 30px;
 }
 
+.clear {
+  display: flex;
+  justify-content: flex-end;
+  width: 310px;
+  height: 45px;
+}
 
 h3 {
   font-size: 22px;

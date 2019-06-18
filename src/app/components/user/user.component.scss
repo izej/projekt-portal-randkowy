@@ -174,7 +174,6 @@ ol, ul {
 .favico {
   padding: 3px;
   border-radius: 50%;
-  border: solid 2px rgb(31, 37, 50);
   color: rgb(31, 37, 50);
   font-size:15px;
   float: left;
@@ -185,11 +184,14 @@ ol, ul {
   cursor: pointer;
 }
 
-
+.button-icon {
+  background-color: white;
+}
 
 .text-icon {
 padding: 0px;
 margin-left: 50px;
+margin-top: 10px;
 font-family: NewsCycle-Regular;
 font-size: 20px;
 }
