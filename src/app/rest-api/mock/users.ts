@@ -821,8 +821,8 @@ export const USERS = [
 
   {
     "id": 66,
-    "name": "imie",
-    "avatar":"http://cdn.24.co.za/files/Cms/General/d/7532/14508d8d91c94e0591c6732dc26e435b.jpg",
+    "name": "Bożydar",
+    "avatar":"https://img5.zergnet.com/3714690_300.jpg",
     "surname": "nazwisko",
     "dob": 1560087013000,
     "email": "mail",

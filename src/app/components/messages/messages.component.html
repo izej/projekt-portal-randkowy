@@ -1,11 +1,66 @@
-<div class="wraper">
+<div class="wrapper">
 
-  <div class="users-list">
+  <div class="users-list" >
+    <div class="users-header">
+        <img class="image" src="/assets/img/czat.png" width="100%" height="100%">
+        <h2 class="title">Czaty</h2>
+        <div style="clear:both;"> </div>
+    </div>
+
+    <mat-form-field class="filter" >
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Szukaj">
+      </mat-form-field>
+
+
+      <div class="table-container">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" scrollY="true">
+
+
+           <ng-container matColumnDef="avatar">
+            <!-- <th mat-header-cell *matHeaderCellDef>  </th> -->
+            <td mat-cell *matCellDef="let element"> <img class="image" [src]="element.avatar" /> </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="name">
+            <!-- <th mat-header-cell *matHeaderCellDef> Imię </th> -->
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="surname">
+            <!-- <th mat-header-cell *matHeaderCellDef> Nazwisko </th> -->
+            <td mat-cell *matCellDef="let element"> {{element.surname}} </td>
+          </ng-container>
+
+
+          <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr> -->
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        </table>
+      </div>
+
 
     </div>
 
 
   <div class="content">
+
+  </div>
+
+  <div class="description">
+
+    <h1> Witaj na czacie! </h1>
+    <h3>
+    Czat służy przede wszystkim do rozmów, dyskusji.
+    Pamiętaj o tym, że nawet mając całkowicie odmienne zdanie, poglądy,
+    można rozmawiać na każdy temat spokojnie - bez obrażania się nawzajem.
+    Własne zdanie podczas rozmowy jest jak najbardziej wskazane,
+    jednak zasady korzystania z czatu reguluje nasz regulamin. </h3>
+<h3>
+    Uważaj na oszustów matrymonialnych i baw się dobrze!
+
+    </h3>
 
   </div>
   <div style="clear: both"> </div>
