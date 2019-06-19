@@ -6,13 +6,14 @@
 }
 
 .content-box {
-background-color: #ffffff;
-border-radius: 4px;
-width: 700px;
-margin: 35px;
-margin-left: -200px;
-padding: 10px;
-box-shadow: 0 8px 8px 0 rgba(99, 81, 81, 0.22), 0 8px 8px 0 rgba(83, 70, 70, 0.3);
+  background-color: #ffffff;
+  border-radius: 4px;
+  width: 700px;
+  margin: 35px;
+  margin-left: -200px;
+  padding: 10px;
+  box-shadow: 0 8px 8px 0 rgba(99, 81, 81, 0.22),
+    0 8px 8px 0 rgba(83, 70, 70, 0.3);
 }
 
 .nav {
@@ -21,7 +22,7 @@ box-shadow: 0 8px 8px 0 rgba(99, 81, 81, 0.22), 0 8px 8px 0 rgba(83, 70, 70, 0.3
   justify-content: center;
   background-color: #6d3341;
   text-align: center;
-	border-top: 1px solid #632a37;
+  border-top: 1px solid #632a37;
   border-bottom: 1px solid #632a37;
   color: #ffffff;
   height: 70px;
@@ -29,10 +30,9 @@ box-shadow: 0 8px 8px 0 rgba(99, 81, 81, 0.22), 0 8px 8px 0 rgba(83, 70, 70, 0.3
 }
 
 h1 {
-	font-size: 35px;
-  font-family: 'GreatVibes';
+  font-size: 35px;
+  font-family: "GreatVibes";
   float: left;
-
 }
 
 h2 {
@@ -40,7 +40,6 @@ h2 {
   font-size: 20px;
   float: left;
   margin-left: 20px;
-
 }
 
 h3 {
@@ -50,9 +49,7 @@ h3 {
   float: left;
   margin-left: 15px;
   color: rgb(255, 43, 78);
-
 }
-
 
 .icon {
   float: left;
@@ -63,20 +60,16 @@ h3 {
 .personal_data {
   display: flex;
   justify-content: center;
-
 }
 
 .user_data {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-
-
 }
 
 .td_class_r {
   width: 350px;
-
 }
 
 .td_class_l {
@@ -90,7 +83,6 @@ h3 {
 
 table {
   margin-bottom: 14px;
-
 }
 
 .separated {
@@ -116,12 +108,18 @@ mat-datepicker-toggle {
 .button-cont {
   display: flex;
   justify-content: flex-end;
-    width: 700px;
+  width: 700px;
 }
 
-
-mat-step-header
-{
+mat-step-header {
   background-color: #6d3341;
 }
 
+mat-slider {
+  width: 190px;
+  color: rgb(255, 43, 78);
+}
+
+.mat-slider-track-fill {
+  background-color: rgb(255, 43, 78);
+}

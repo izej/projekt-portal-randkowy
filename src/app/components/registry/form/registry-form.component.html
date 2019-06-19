@@ -7,19 +7,18 @@
       <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
           <ng-template matStepLabel>
-
-            <h3> Na początek podaj nam swoje podstawowe dane</h3>
+            <h3>Na początek podaj nam swoje podstawowe dane</h3>
             <div style="clear: both;"></div>
           </ng-template>
 
           <div class="personal_data">
             <table>
               <tr>
-                <td class="td_class_l"> Imię: </td>
+                <td class="td_class_l">Imię:</td>
                 <td class="td_class_r">
                   <mat-form-field appearance="standard">
                     <mat-label>Podaj swoje imię</mat-label>
-                    <input matInput placeholder="Imię">
+                    <input matInput placeholder="Imię" />
                     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
                     <mat-hint>Jak masz na imię?</mat-hint>
                   </mat-form-field>
@@ -27,62 +26,61 @@
               </tr>
 
               <tr>
-                <td class="td_class_l"> Data urodzenia: </td>
+                <td class="td_class_l">Data urodzenia:</td>
                 <td class="td_class_r">
                   <mat-form-field appearance="standard">
-                    <input matInput [matDatepicker]="picker1" placeholder="Data urodzenia" [formControl]="date">
-                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <input
+                      matInput
+                      [matDatepicker]="picker1"
+                      placeholder="Data urodzenia"
+                      [formControl]="date"
+                    />
+                    <mat-datepicker-toggle
+                      matSuffix
+                      [for]="picker1"
+                    ></mat-datepicker-toggle>
                     <mat-datepicker #picker1></mat-datepicker>
                     <mat-hint>Kiedy się urodziłeś/aś?</mat-hint>
                   </mat-form-field>
                 </td>
               </tr>
-
             </table>
-
           </div>
           <div>
-            <button mat-button matStepperNext class="button_next" mat-raised-button>Przejdź dalej </button>
+            <button
+              mat-button
+              matStepperNext
+              class="button_next"
+              mat-raised-button
+            >
+              Przejdź dalej
+            </button>
           </div>
-
         </form>
       </mat-step>
       <mat-step [stepControl]="secondFormGroup">
         <form [formGroup]="secondFormGroup">
           <ng-template matStepLabel>
-
-
-            <h3> Potrzebujemy teraz kilku informacji o Twoim wyglądzie</h3>
+            <h3>Potrzebujemy teraz kilku informacji o Twoim wyglądzie</h3>
             <div style="clear: both;"></div>
-
           </ng-template>
           <div class="user_data">
             <table>
               <tr>
-                <td class="td_class_l"> Wzrost: </td>
+                <td class="td_class_l">Wzrost:</td>
                 <td class="td_class_r">
-                  <mat-form-field>
-                    <mat-select placeholder="Wybierz wzrost">
-                      <mat-option value="option"> do 150 </mat-option>
-                      <mat-option value="option"> 150-155 </mat-option>
-                      <mat-option value="option"> 156-160 </mat-option>
-                      <mat-option value="option"> 161-165 </mat-option>
-                      <mat-option value="option"> 166-170 </mat-option>
-                      <mat-option value="option"> 171-175 </mat-option>
-                      <mat-option value="option"> 176-180 </mat-option>
-                      <mat-option value="option"> 181-185 </mat-option>
-                      <mat-option value="option"> 186-190 </mat-option>
-                      <mat-option value="option"> 191-195 </mat-option>
-                      <mat-option value="option"> 196-200 </mat-option>
-                      <mat-option value="option"> ponad 200 </mat-option>
-                    </mat-select>
-                    <mat-hint align="end"> Rozwiń strzałką ^</mat-hint>
-                  </mat-form-field>
+                  <mat-slider
+                    thumbLabel
+                    [displayWith]="formatLabel"
+                    tickInterval="100"
+                    min="130"
+                    max="250"
+                  ></mat-slider>
                 </td>
               </tr>
 
               <tr>
-                <td class="td_class_l"> Kolor oczu: </td>
+                <td class="td_class_l">Kolor oczu:</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz kolor oczu">
@@ -92,13 +90,12 @@
                       <mat-option value="option"> Szare </mat-option>
                       <mat-option value="option"> Czarne </mat-option>
                     </mat-select>
-
                   </mat-form-field>
                 </td>
               </tr>
 
               <tr>
-                <td class="td_class_l"> Kolor włosów: </td>
+                <td class="td_class_l">Kolor włosów:</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz kolor włosów">
@@ -108,13 +105,12 @@
                       <mat-option value="option"> Rude </mat-option>
                       <mat-option value="option"> Kolorowe </mat-option>
                     </mat-select>
-
                   </mat-form-field>
                 </td>
               </tr>
 
               <tr>
-                <td class="td_class_l"> Długość włosów: </td>
+                <td class="td_class_l">Długość włosów:</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz długość włosów">
@@ -128,46 +124,72 @@
               </tr>
 
               <tr>
-                <td class="td_class_l"> Sylwetka: </td>
+                <td class="td_class_l">Sylwetka:</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz sylwetkę">
                       <mat-option value="option"> Szczupła </mat-option>
                       <mat-option value="option"> Normalna </mat-option>
-                      <mat-option value="option"> Kilka kilo za dużo </mat-option>
+                      <mat-option value="option">
+                        Kilka kilo za dużo
+                      </mat-option>
                     </mat-select>
                   </mat-form-field>
                 </td>
               </tr>
-
             </table>
           </div>
 
-          <button mat-button matStepperPrevious class="button_next" mat-raised-button>Wróć </button>
-          <button mat-button matStepperNext class="button_next" mat-raised-button>Przejdź dalej </button>
-
+          <button
+            mat-button
+            matStepperPrevious
+            class="button_next"
+            mat-raised-button
+          >
+            Wróć
+          </button>
+          <button
+            mat-button
+            matStepperNext
+            class="button_next"
+            mat-raised-button
+          >
+            Przejdź dalej
+          </button>
         </form>
       </mat-step>
 
       <mat-step [stepControl]="thirdFormGroup">
         <form [formGroup]="thirdFormGroup">
           <ng-template matStepLabel>
-            <h3> Opowiedz nam o swoim pochodzeniu </h3>
+            <h3>Opowiedz nam o swoim pochodzeniu</h3>
             <div style="clear: both;"></div>
           </ng-template>
           <div class="personal_data">
             <table>
               <tr>
-                <td class="td_class_l"> Miasto: </td>
+                <td class="td_class_l">Miasto:</td>
                 <td class="td_class_r">
                   <form [formGroup]="cityForm">
                     <mat-form-field>
-                      <input type="text" matInput placeholder="Wybierz Miasto" formControlName="cityGroup" required
-                        [matAutocomplete]="autoGroup">
+                      <input
+                        type="text"
+                        matInput
+                        placeholder="Wybierz Miasto"
+                        formControlName="cityGroup"
+                        required
+                        [matAutocomplete]="autoGroup"
+                      />
                       <mat-autocomplete #autoGroup="matAutocomplete">
-                        <mat-optgroup *ngFor="let group of cityGroupOptions | async" [label]="group.letter">
-                          <mat-option *ngFor="let name of group.names" [value]="name">
-                            {{name}}
+                        <mat-optgroup
+                          *ngFor="let group of cityGroupOptions | async"
+                          [label]="group.letter"
+                        >
+                          <mat-option
+                            *ngFor="let name of group.names"
+                            [value]="name"
+                          >
+                            {{ name }}
                           </mat-option>
                         </mat-optgroup>
                       </mat-autocomplete>
@@ -175,30 +197,40 @@
                   </form>
                 </td>
               </tr>
-
             </table>
-
           </div>
-          <button mat-button matStepperPrevious class="button_next" mat-raised-button>Wróć </button>
-          <button mat-button matStepperNext class="button_next" mat-raised-button>Przejdź dalej </button>
-
+          <button
+            mat-button
+            matStepperPrevious
+            class="button_next"
+            mat-raised-button
+          >
+            Wróć
+          </button>
+          <button
+            mat-button
+            matStepperNext
+            class="button_next"
+            mat-raised-button
+          >
+            Przejdź dalej
+          </button>
         </form>
       </mat-step>
       <mat-step [stepControl]="thirdFormGroup">
         <form [formGroup]="thirdFormGroup">
           <ng-template matStepLabel>
-            <h3> Czym się zajmujesz? </h3>
+            <h3>Czym się zajmujesz?</h3>
             <div style="clear: both;"></div>
           </ng-template>
           <div class="personal_data">
             <table>
-
               <tr>
-                <td class="td_class_l"> Zawód: </td>
+                <td class="td_class_l">Zawód:</td>
                 <td class="td_class_r">
                   <mat-form-field appearance="standard">
                     <mat-label>Podaj zawód</mat-label>
-                    <input matInput placeholder="np. Grabarz">
+                    <input matInput placeholder="np. Grabarz" />
                     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
                     <mat-hint>Podziel się swoją karierą!</mat-hint>
                   </mat-form-field>
@@ -206,7 +238,7 @@
               </tr>
 
               <tr>
-                <td class="td_class_l"> Wykształcenie: </td>
+                <td class="td_class_l">Wykształcenie:</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz wykształcenie">
@@ -217,35 +249,48 @@
                       <mat-option value="option"> Magister </mat-option>
                       <mat-option value="option"> Doktor </mat-option>
                     </mat-select>
-
                   </mat-form-field>
                 </td>
               </tr>
-
             </table>
           </div>
-          <button mat-button matStepperPrevious class="button_next" mat-raised-button>Wróć </button>
-          <button mat-button matStepperNext class="button_next" mat-raised-button>Przejdź dalej </button>
-
+          <button
+            mat-button
+            matStepperPrevious
+            class="button_next"
+            mat-raised-button
+          >
+            Wróć
+          </button>
+          <button
+            mat-button
+            matStepperNext
+            class="button_next"
+            mat-raised-button
+          >
+            Przejdź dalej
+          </button>
         </form>
       </mat-step>
       <mat-step [stepControl]="fifthFormGroup">
         <form [formGroup]="fifthFormGroup">
           <ng-template matStepLabel>
-            <h3>Powiedz nam coś więcej o sobie </h3>
+            <h3>Powiedz nam coś więcej o sobie</h3>
             <div style="clear: both;"></div>
           </ng-template>
           <div class="user_data">
             <table>
               <tr>
-                <td class="td_class_l"> Religia: </td>
+                <td class="td_class_l">Religia:</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz przynależność religijną">
                       <mat-option value="option"> Katolik </mat-option>
                       <mat-option value="option"> Ewangelik </mat-option>
                       <mat-option value="option"> Grekokatolik </mat-option>
-                      <mat-option value="option"> Chrześcijanin (inne) </mat-option>
+                      <mat-option value="option">
+                        Chrześcijanin (inne)
+                      </mat-option>
                       <mat-option value="option"> Żyd </mat-option>
                       <mat-option value="option"> Muzułmanin </mat-option>
                       <mat-option value="option"> Buddysta </mat-option>
@@ -253,51 +298,55 @@
                       <mat-option value="option"> Ateista </mat-option>
                       <mat-option value="option"> Inne </mat-option>
                     </mat-select>
-
                   </mat-form-field>
                 </td>
               </tr>
 
               <tr>
-                <td class="td_class_l"> Stosunek do alkoholu: </td>
+                <td class="td_class_l">Stosunek do alkoholu:</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz stosunek do alkoholu">
                       <mat-option value="option"> Wogóle </mat-option>
                       <mat-option value="option"> Okazjonalnie </mat-option>
                       <mat-option value="option"> Często </mat-option>
-                      <mat-option value="option"> Zapytaj mnie osobiście!</mat-option>
+                      <mat-option value="option">
+                        Zapytaj mnie osobiście!</mat-option
+                      >
                     </mat-select>
-
                   </mat-form-field>
                 </td>
               </tr>
 
               <tr>
-                <td class="td_class_l"> Stosunek do palenia: </td>
+                <td class="td_class_l">Stosunek do palenia:</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz stosunek do palenia">
                       <mat-option value="option"> Nie palę </mat-option>
                       <mat-option value="option"> Czasami </mat-option>
                       <mat-option value="option"> Codziennie </mat-option>
-                      <mat-option value="option"> Zapytaj mnie osobiście!</mat-option>
+                      <mat-option value="option">
+                        Zapytaj mnie osobiście!</mat-option
+                      >
                     </mat-select>
-
                   </mat-form-field>
                 </td>
               </tr>
               <tr>
-                <td class="td_class_l"> Stosunek do narkotyków: </td>
+                <td class="td_class_l">Stosunek do narkotyków:</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz stosunek do narkotyków">
-                      <mat-option value="option"> A komu to potrzebne </mat-option>
+                      <mat-option value="option">
+                        A komu to potrzebne
+                      </mat-option>
                       <mat-option value="option"> Okazjonalnie </mat-option>
                       <mat-option value="option"> Często </mat-option>
-                      <mat-option value="option"> Zapytaj mnie osobiście!</mat-option>
+                      <mat-option value="option">
+                        Zapytaj mnie osobiście!</mat-option
+                      >
                     </mat-select>
-
                   </mat-form-field>
                 </td>
               </tr>
@@ -306,38 +355,57 @@
                 <td></td>
               </tr>
               <tr>
-                <td class="td_class_l"> Dzieci </td>
+                <td class="td_class_l">Dzieci</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz">
-                      <mat-option value="option"> Nie mam i nie chcę mieć </mat-option>
-                      <mat-option value="option"> Nie mam i chcę mieć </mat-option>
-                      <mat-option value="option"> Mam, mieszkają ze mną </mat-option>
-                      <mat-option value="option"> Mam, nie mieszkają ze mną</mat-option>
+                      <mat-option value="option">
+                        Nie mam i nie chcę mieć
+                      </mat-option>
+                      <mat-option value="option">
+                        Nie mam i chcę mieć
+                      </mat-option>
+                      <mat-option value="option">
+                        Mam, mieszkają ze mną
+                      </mat-option>
+                      <mat-option value="option">
+                        Mam, nie mieszkają ze mną</mat-option
+                      >
                       <mat-option value="option"> To skomplikowane</mat-option>
                     </mat-select>
-
                   </mat-form-field>
                 </td>
               </tr>
-
             </table>
           </div>
-          <button mat-button matStepperPrevious class="button_next" mat-raised-button>Wróć </button>
-          <button mat-button matStepperNext class="button_next" mat-raised-button>Przejdź dalej </button>
-
+          <button
+            mat-button
+            matStepperPrevious
+            class="button_next"
+            mat-raised-button
+          >
+            Wróć
+          </button>
+          <button
+            mat-button
+            matStepperNext
+            class="button_next"
+            mat-raised-button
+          >
+            Przejdź dalej
+          </button>
         </form>
       </mat-step>
       <mat-step [stepControl]="sixthFormGroup">
         <form [formGroup]="sixthFormGroup">
           <ng-template matStepLabel>
-            <h3>Powiedz nam o wyglądzie Twojego wymarzonego partnera! </h3>
+            <h3>Powiedz nam o wyglądzie Twojego wymarzonego partnera!</h3>
             <div style="clear: both;"></div>
           </ng-template>
           <div class="personal_data">
             <table>
               <tr>
-                <td class="td_class_l"> Wzrost: </td>
+                <td class="td_class_l">Wzrost:</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz wzrost">
@@ -360,7 +428,7 @@
               </tr>
 
               <tr>
-                <td class="td_class_l"> Kolor oczu: </td>
+                <td class="td_class_l">Kolor oczu:</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz kolor oczu">
@@ -370,13 +438,12 @@
                       <mat-option value="option"> Szare </mat-option>
                       <mat-option value="option"> Czarne </mat-option>
                     </mat-select>
-
                   </mat-form-field>
                 </td>
               </tr>
 
               <tr>
-                <td class="td_class_l"> Kolor włosów: </td>
+                <td class="td_class_l">Kolor włosów:</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz kolor włosów">
@@ -386,13 +453,12 @@
                       <mat-option value="option"> Rude </mat-option>
                       <mat-option value="option"> Kolorowe </mat-option>
                     </mat-select>
-
                   </mat-form-field>
                 </td>
               </tr>
 
               <tr>
-                <td class="td_class_l"> Długość włosów: </td>
+                <td class="td_class_l">Długość włosów:</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz długość włosów">
@@ -406,43 +472,58 @@
               </tr>
 
               <tr>
-                <td class="td_class_l"> Sylwetka: </td>
+                <td class="td_class_l">Sylwetka:</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz sylwetkę">
                       <mat-option value="option"> Szczupła </mat-option>
                       <mat-option value="option"> Normalna </mat-option>
-                      <mat-option value="option"> Kilka kilo za dużo </mat-option>
+                      <mat-option value="option">
+                        Kilka kilo za dużo
+                      </mat-option>
                     </mat-select>
                   </mat-form-field>
                 </td>
               </tr>
-
             </table>
-
           </div>
-          <button mat-button matStepperPrevious class="button_next" mat-raised-button>Wróć </button>
-          <button mat-button matStepperNext class="button_next" mat-raised-button>Przejdź dalej </button>
-
+          <button
+            mat-button
+            matStepperPrevious
+            class="button_next"
+            mat-raised-button
+          >
+            Wróć
+          </button>
+          <button
+            mat-button
+            matStepperNext
+            class="button_next"
+            mat-raised-button
+          >
+            Przejdź dalej
+          </button>
         </form>
       </mat-step>
       <mat-step [stepControl]="seventhFormGroup">
         <form [formGroup]="seventhFormGroup">
           <ng-template matStepLabel>
-            <h3>Powiedz nam, kogo szukasz </h3>
+            <h3>Powiedz nam, kogo szukasz</h3>
             <div style="clear: both;"></div>
           </ng-template>
           <div class="user_data">
             <table>
               <tr>
-                <td class="td_class_l"> Religia Twojego partnera: </td>
+                <td class="td_class_l">Religia Twojego partnera:</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz przynależność religijną">
                       <mat-option value="option"> Katolik </mat-option>
                       <mat-option value="option"> Ewangelik </mat-option>
                       <mat-option value="option"> Grekokatolik </mat-option>
-                      <mat-option value="option"> Chrześcijanin (inne) </mat-option>
+                      <mat-option value="option">
+                        Chrześcijanin (inne)
+                      </mat-option>
                       <mat-option value="option"> Żyd </mat-option>
                       <mat-option value="option"> Muzułmanin </mat-option>
                       <mat-option value="option"> Buddysta </mat-option>
@@ -450,13 +531,14 @@
                       <mat-option value="option"> Ateista </mat-option>
                       <mat-option value="option"> Obojętne </mat-option>
                     </mat-select>
-
                   </mat-form-field>
                 </td>
               </tr>
 
               <tr>
-                <td class="td_class_l"> Stosunek do alkoholu Twojego partnera: </td>
+                <td class="td_class_l">
+                  Stosunek do alkoholu Twojego partnera:
+                </td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz stosunek do alkoholu">
@@ -465,13 +547,14 @@
                       <mat-option value="option"> Często </mat-option>
                       <mat-option value="option"> Obojętne</mat-option>
                     </mat-select>
-
                   </mat-form-field>
                 </td>
               </tr>
 
               <tr>
-                <td class="td_class_l"> Stosunek do palenia Twojego partnera: </td>
+                <td class="td_class_l">
+                  Stosunek do palenia Twojego partnera:
+                </td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz stosunek do palenia">
@@ -480,21 +563,23 @@
                       <mat-option value="option"> Codziennie </mat-option>
                       <mat-option value="option"> Obojętne</mat-option>
                     </mat-select>
-
                   </mat-form-field>
                 </td>
               </tr>
               <tr>
-                <td class="td_class_l"> Stosunek do narkotyków Twojego partnera: </td>
+                <td class="td_class_l">
+                  Stosunek do narkotyków Twojego partnera:
+                </td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz stosunek do narkotyków">
-                      <mat-option value="option"> A komu to potrzebne </mat-option>
+                      <mat-option value="option">
+                        A komu to potrzebne
+                      </mat-option>
                       <mat-option value="option"> Okazjonalnie </mat-option>
                       <mat-option value="option"> Często </mat-option>
                       <mat-option value="option"> Obojętne</mat-option>
                     </mat-select>
-
                   </mat-form-field>
                 </td>
               </tr>
@@ -503,7 +588,7 @@
                 <td></td>
               </tr>
               <tr>
-                <td class="td_class_l"> Dzieci Twojego partnera </td>
+                <td class="td_class_l">Dzieci Twojego partnera</td>
                 <td class="td_class_r">
                   <mat-form-field>
                     <mat-select placeholder="Wybierz">
@@ -513,32 +598,57 @@
                       <mat-option value="option"> Z dziećmi</mat-option>
                       <mat-option value="option"> Obojętne</mat-option>
                     </mat-select>
-
                   </mat-form-field>
                 </td>
               </tr>
-
             </table>
           </div>
-          <button mat-button matStepperPrevious class="button_next" mat-raised-button>Wróć </button>
-          <button mat-button matStepperNext class="button_next" mat-raised-button>Przejdź dalej </button>
-
+          <button
+            mat-button
+            matStepperPrevious
+            class="button_next"
+            mat-raised-button
+          >
+            Wróć
+          </button>
+          <button
+            mat-button
+            matStepperNext
+            class="button_next"
+            mat-raised-button
+          >
+            Przejdź dalej
+          </button>
         </form>
       </mat-step>
       <mat-step>
         <ng-template matStepLabel>
           <h3>Zrobione!</h3>
         </ng-template>
-        <br> Dziękujemy, to już wszystko! <br>
+        <br />
+        Dziękujemy, to już wszystko! <br />
         <div>
-          <button mat-button matStepperPrevious class="button_next" mat-raised-button>Wróć </button>
-          <button mat-button (click)="stepper.reset()" mat-raised-button class="button_next">Resetuj</button>
-          <button class="button_next" mat-raised-button routerLink="/home-user"> Zakończ </button>
-
+          <button
+            mat-button
+            matStepperPrevious
+            class="button_next"
+            mat-raised-button
+          >
+            Wróć
+          </button>
+          <button
+            mat-button
+            (click)="stepper.reset()"
+            mat-raised-button
+            class="button_next"
+          >
+            Resetuj
+          </button>
+          <button class="button_next" mat-raised-button routerLink="/home-user">
+            Zakończ
+          </button>
         </div>
       </mat-step>
     </mat-vertical-stepper>
-
   </div>
-
 </div>

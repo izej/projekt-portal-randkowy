@@ -155,4 +155,16 @@ export class RegistryFormComponent implements OnInit {
     return this.cityGroups;
   }
 
+  formatLabel(value: number | null) {
+    if (!value) {
+      return 0;
+    }
+
+    if (value > 0) {
+      return value;
+    }
+
+    return value;
+  }
+
 }
